@@ -1,0 +1,5 @@
+﻿{
+  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
+  "Domain": "rankslice.com",
+  "Id": "dbc20f70-cdc0-4d1a-97e5-8d86af3037ea"
+}
