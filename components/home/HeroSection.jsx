@@ -12,9 +12,8 @@ export default function HeroSection() {
         {/* Text content */}
         <div>
           <h1 className='text-4xl md:text-5xl font-bold text-foreground leading-tight mb-6'>
-            Build a Website That Ranks
-            <br className='hidden md:block' />
-            and Converts — Without the Jargon
+            Build a Website That Ranks and Converts{" "}
+            <br className='hidden md:block' /> — Without the Jargon
           </h1>
 
           <p className='text-lg text-muted-foreground mb-8'>

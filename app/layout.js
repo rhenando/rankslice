@@ -1,17 +1,11 @@
-// app/layout.jsx
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css"; // Tailwind + keen-slider CSS
+import "./globals.css";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
+import { Manrope } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const manrope = Manrope({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: "--font-manrope",
 });
 
 export const metadata = {
@@ -40,7 +34,7 @@ export const metadata = {
     siteName: "Rank Slice",
     images: [
       {
-        url: "https://rankslice.com/og-image.jpg", // Replace with your actual image
+        url: "https://rankslice.com/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Rank Slice – Web Development & SEO",
@@ -53,8 +47,8 @@ export const metadata = {
     title: "Rank Slice | Web Development & SEO Made Simple",
     description:
       "Turn your idea into a high-performing website. Rank Slice builds sites that look great and get found.",
-    creator: "@yourhandle", // Optional
-    images: ["https://https://rankslice.com/og-image.jpg"], // Replace with actual image
+    creator: "@yourhandle",
+    images: ["https://rankslice.com/og-image.jpg"],
   },
 };
 
@@ -62,12 +56,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
+        className={`${manrope.variable} font-sans antialiased flex flex-col min-h-screen`}
       >
         <Header />
-
         <main className='flex-1'>{children}</main>
-
         <Footer />
       </body>
     </html>
