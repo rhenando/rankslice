@@ -2,53 +2,61 @@
 
 import React from "react";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
   return (
-    <section className='w-full bg-background min-h-[90vh] flex items-center px-6'>
-      <div className='max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center w-full'>
-        {/* Text content */}
-        <div>
-          <h1 className='text-4xl md:text-5xl font-bold text-foreground leading-tight mb-6'>
-            Build a Website That Ranks and Converts{" "}
-            <br className='hidden md:block' /> — Without the Jargon
-          </h1>
+    <section className='relative w-full min-h-[90vh] flex items-center px-6 overflow-hidden bg-background'>
+      {/* 🔹 Background Image */}
+      <div className='absolute inset-0 z-0'>
+        <Image
+          src='/hero-illustration.jpeg' // Replace with your actual image
+          alt='Web development and SEO background'
+          fill
+          className='object-cover'
+          priority
+        />
 
-          <p className='text-lg text-muted-foreground mb-8'>
-            We help entrepreneurs and small business owners turn their ideas
-            into beautiful, high-performing websites with SEO baked in from the
-            start. No fluff. Just results.
-          </p>
+        {/* 🔹 Optional Gradient Overlay (blue → background) */}
+        <div className='absolute inset-0 bg-gradient-to-b from-[#2980b9]/30 to-background' />
+      </div>
 
-          <div className='space-x-4'>
-            <Button
-              asChild
-              className='bg-primary text-primary-foreground hover:opacity-90'
-            >
-              <Link href='/contact'>Get a Free Strategy Call</Link>
-            </Button>
-            <Button
-              variant='outline'
-              asChild
-              className='border-primary text-primary hover:bg-primary/10'
-            >
-              <Link href='/portfolio'>See Our Work</Link>
-            </Button>
+      {/* 🔸 Foreground Content */}
+      <div className='relative z-10 max-w-7xl mx-auto w-full'>
+        <div className='grid md:grid-cols-2 gap-10 items-center'>
+          {/* ✏️ Text Section */}
+          <div>
+            <h1 className='text-4xl md:text-5xl font-bold text-black leading-tight mb-6'>
+              Build a Website That Ranks and Converts{" "}
+              <br className='hidden md:block' /> — Without the Jargon
+            </h1>
+
+            <p className='text-lg text-gray-800 mb-8'>
+              We help entrepreneurs and small business owners turn their ideas
+              into beautiful, high-performing websites with SEO baked in from
+              the start. No fluff. Just results.
+            </p>
+
+            <div className='space-x-4'>
+              <Button
+                asChild
+                className='bg-primary text-primary-foreground hover:opacity-90'
+              >
+                <Link href='/contact'>Get a Free Strategy Call</Link>
+              </Button>
+              <Button
+                variant='outline'
+                asChild
+                className='border-primary text-primary hover:bg-primary/10'
+              >
+                <Link href='/portfolio'>See Our Work</Link>
+              </Button>
+            </div>
           </div>
-        </div>
 
-        {/* Hero image */}
-        <div className='relative w-full h-72 md:h-96'>
-          <Image
-            src='/hero-illustration.png'
-            alt='Web development and SEO for startups'
-            fill
-            style={{ objectFit: "contain" }}
-            className='rounded-xl'
-            priority
-          />
+          {/* Placeholder Right Column (optional for layout balance) */}
+          <div className='hidden md:block' />
         </div>
       </div>
     </section>

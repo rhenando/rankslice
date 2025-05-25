@@ -18,16 +18,9 @@ const Footer = () => {
         {/* Logo & Tagline */}
         <div className='space-y-4 col-span-1'>
           <Link href='/' className='flex items-center space-x-2'>
-            <div className='relative w-8 h-8'>
-              <Image
-                src='/logo.jpg'
-                alt='Rank Slice Logo'
-                fill
-                style={{ objectFit: "contain" }}
-              />
-            </div>
             <span className='text-lg font-semibold text-foreground'>
-              Rank Slice
+              <span className='line-through decoration-[#2980b9]'>Rank</span>{" "}
+              Slice
             </span>
           </Link>
           <p className='text-sm'>

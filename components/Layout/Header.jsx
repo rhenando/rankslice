@@ -20,16 +20,15 @@ export default function Header() {
     <header className='sticky top-0 z-50 bg-background border-b border-border shadow-sm'>
       <div className='max-w-7xl mx-auto px-4 py-4 flex items-center justify-between'>
         {/* Logo */}
-        <Link href='/' className='flex items-center space-x-2'>
-          <div className='relative w-10 h-10'>
-            <Image
-              src='/logo.jpg'
-              alt='Rank Slice Logo'
-              fill
-              style={{ objectFit: "contain" }}
-            />
-          </div>
-          <span className='font-bold text-xl text-foreground'>Rank Slice</span>
+        <Link href='/' className='flex items-center'>
+          <Image
+            src='/logo.svg'
+            alt='Rank Slice Logo'
+            width={160} // ⬅️ increase this for larger logo
+            height={26} // optional: control vertical height
+            className='object-contain'
+            priority
+          />
         </Link>
 
         {/* Desktop Navigation */}
