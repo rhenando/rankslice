@@ -2,6 +2,7 @@ import "./globals.css";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
 import { Manrope } from "next/font/google";
+import { Toaster } from "sonner"; // ✅ Import Toaster
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -58,6 +59,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${manrope.variable} font-sans antialiased flex flex-col min-h-screen`}
       >
+        <Toaster richColors position='top-center' /> {/* ✅ Sonner added */}
         <Header />
         <main className='flex-1'>{children}</main>
         <Footer />

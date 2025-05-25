@@ -3,35 +3,50 @@
 import { useState } from "react";
 import { db } from "@/firebase/config";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { toast } from "sonner";
+import { useRouter } from "next/navigation";
 
 export default function ContactPage() {
+  const router = useRouter();
+
   const [status, setStatus] = useState("idle");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
+    honeypot: "", // 🐝 Bot trap
   });
 
   const handleChange = (e) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }));
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (formData.honeypot) return; // 🧠 Bot detected
+
     setStatus("submitting");
 
     try {
       await addDoc(collection(db, "contactMessages"), {
-        ...formData,
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+        status: "unread",
         createdAt: serverTimestamp(),
       });
+
+      toast.success("✅ Message sent!");
+      setFormData({ name: "", email: "", message: "", honeypot: "" });
       setStatus("submitted");
-      setFormData({ name: "", email: "", message: "" });
+
+      setTimeout(() => {
+        router.push("/thank-you");
+      }, 3000);
     } catch (err) {
-      console.error("Error submitting contact form:", err);
+      console.error("❌ Contact form error:", err);
+      toast.error("Something went wrong. Please try again.");
       setStatus("error");
     }
   };
@@ -45,6 +60,16 @@ export default function ContactPage() {
       </p>
 
       <form onSubmit={handleSubmit} className='space-y-6'>
+        {/* Honeypot field (hidden from users) */}
+        <input
+          type='text'
+          name='honeypot'
+          className='hidden'
+          value={formData.honeypot}
+          onChange={handleChange}
+          autoComplete='off'
+        />
+
         <div>
           <label
             htmlFor='name'
@@ -75,6 +100,8 @@ export default function ContactPage() {
             name='email'
             type='email'
             required
+            pattern='^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$'
+            title='Please enter a valid email address'
             value={formData.email}
             onChange={handleChange}
             className='mt-1 w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-primary'
@@ -106,18 +133,6 @@ export default function ContactPage() {
         >
           {status === "submitting" ? "Sending..." : "Send Message"}
         </button>
-
-        {status === "submitted" && (
-          <p className='text-green-600 font-medium text-center'>
-            ✅ Thanks! We’ve received your message.
-          </p>
-        )}
-
-        {status === "error" && (
-          <p className='text-red-600 font-medium text-center'>
-            ❌ Something went wrong. Please try again.
-          </p>
-        )}
       </form>
     </section>
   );
