@@ -11,7 +11,7 @@ rankslice
 │   │   │   ├── Gf_kQBsmEQYkSVOwfHcK0DULxDUoYAJoB7bLl484Rlo
 │   │   │   │   └── 60.1748180165267.jL_Nr2_UCW5HwvS8cCV2tkwhUJJdVRNId9dGFHhjYyU.Vy8iNTNmOS0xOTcwN2E1NGExZSI.webp
 │   │   │   ├── n-2Ujdc6z4wSkLHyd0wrRbhNX6dvM44hX49oijNxiCI
-│   │   │   │   └── 60.1748187329612.FYULecFYr-nhKrjikn4YaTkzPnmmfR2hQ6bCpejpbxs.Vy8iMTg5ZTRlLTE5NzA3ZGFlNjc4Ig.webp
+│   │   │   │   └── 60.1748200682871.FYULecFYr-nhKrjikn4YaTkzPnmmfR2hQ6bCpejpbxs.Vy8iMTg5ZTRlLTE5NzA3ZGFlNjc4Ig.webp
 │   │   │   ├── Vx5jUFVZ-PJdp2mDLnp7vvMQJl-9TyKLVnSORJdCLT8
 │   │   │   │   └── 60.1748181619833.sgRqFc3XdGYtMVZsojOAng5Rr-lpitgQkgJw-iEZeNk.Vy8iN2NiMC0xOTcwN2JhOTVlOSI.webp
 │   │   │   ├── xBN_4Xyg0o4TvDdcbjIeCEKKVDfkv8ER_gB3zaStWyA
@@ -76,14 +76,17 @@ rankslice
 │   │   └── .rscinfo
 │   ├── server
 │   │   ├── app
-│   │   │   ├── contact
+│   │   │   ├── admin
 │   │   │   │   ├── page_client-reference-manifest.js
 │   │   │   │   └── page.js
-│   │   │   ├── thank-you
+│   │   │   ├── blog
+│   │   │   │   ├── [slug]
+│   │   │   │   │   ├── page_client-reference-manifest.js
+│   │   │   │   │   └── page.js
 │   │   │   │   ├── page_client-reference-manifest.js
 │   │   │   │   └── page.js
-│   │   │   ├── page_client-reference-manifest.js
-│   │   │   └── page.js
+│   │   │   └── favicon.ico
+│   │   │       └── route.js
 │   │   ├── vendor-chunks
 │   │   │   ├── @firebase.js
 │   │   │   ├── @grpc.js
@@ -92,15 +95,28 @@ rankslice
 │   │   │   ├── @swc.js
 │   │   │   ├── class-variance-authority.js
 │   │   │   ├── clsx.js
+│   │   │   ├── dom-serializer.js
+│   │   │   ├── domelementtype.js
+│   │   │   ├── domhandler.js
+│   │   │   ├── domutils.js
+│   │   │   ├── entities.js
 │   │   │   ├── firebase.js
+│   │   │   ├── html-dom-parser.js
+│   │   │   ├── html-react-parser.js
+│   │   │   ├── htmlparser2.js
 │   │   │   ├── idb.js
+│   │   │   ├── inline-style-parser.js
 │   │   │   ├── lodash.camelcase.js
 │   │   │   ├── long.js
 │   │   │   ├── lucide-react.js
 │   │   │   ├── next.js
 │   │   │   ├── protobufjs.js
+│   │   │   ├── react-property.js
 │   │   │   ├── sonner.js
-│   │   │   └── tailwind-merge.js
+│   │   │   ├── style-to-js.js
+│   │   │   ├── style-to-object.js
+│   │   │   ├── tailwind-merge.js
+│   │   │   └── tslib.js
 │   │   ├── app-paths-manifest.json
 │   │   ├── interception-route-rewrite-manifest.js
 │   │   ├── middleware-build-manifest.js
@@ -115,12 +131,13 @@ rankslice
 │   ├── static
 │   │   ├── chunks
 │   │   │   ├── app
-│   │   │   │   ├── contact
+│   │   │   │   ├── admin
 │   │   │   │   │   └── page.js
-│   │   │   │   ├── thank-you
+│   │   │   │   ├── blog
+│   │   │   │   │   ├── [slug]
+│   │   │   │   │   │   └── page.js
 │   │   │   │   │   └── page.js
-│   │   │   │   ├── layout.js
-│   │   │   │   └── page.js
+│   │   │   │   └── layout.js
 │   │   │   ├── _app-pages-browser_node_modules_next_dist_client_dev_noop-turbopack-hmr_js.js
 │   │   │   ├── app-pages-internals.js
 │   │   │   ├── main-app.js
@@ -141,23 +158,24 @@ rankslice
 │   │   │   └── b8222d26e20b2e06-s.woff2
 │   │   └── webpack
 │   │       ├── app
-│   │       │   ├── layout.0978a0b78ab7957a.hot-update.js
-│   │       │   └── layout.bababc727706dcf3.hot-update.js
-│   │       ├── 0978a0b78ab7957a.webpack.hot-update.json
-│   │       ├── 48b0d5c69e00b4f9.webpack.hot-update.json
+│   │       │   ├── layout.3970691521d4ea4e.hot-update.js
+│   │       │   └── layout.870762fb97805e68.hot-update.js
+│   │       ├── 3970691521d4ea4e.webpack.hot-update.json
 │   │       ├── 633457081244afec._.hot-update.json
-│   │       ├── bababc727706dcf3.webpack.hot-update.json
-│   │       ├── webpack.0978a0b78ab7957a.hot-update.js
-│   │       ├── webpack.48b0d5c69e00b4f9.hot-update.js
-│   │       └── webpack.bababc727706dcf3.hot-update.js
+│   │       ├── 733390477f8806de.webpack.hot-update.json
+│   │       ├── 870762fb97805e68.webpack.hot-update.json
+│   │       ├── webpack.3970691521d4ea4e.hot-update.js
+│   │       ├── webpack.733390477f8806de.hot-update.js
+│   │       └── webpack.870762fb97805e68.hot-update.js
 │   ├── types
 │   │   ├── app
-│   │   │   ├── contact
+│   │   │   ├── admin
 │   │   │   │   └── page.ts
-│   │   │   ├── thank-you
+│   │   │   ├── blog
+│   │   │   │   ├── [slug]
+│   │   │   │   │   └── page.ts
 │   │   │   │   └── page.ts
-│   │   │   ├── layout.ts
-│   │   │   └── page.ts
+│   │   │   └── layout.ts
 │   │   ├── cache-life.d.ts
 │   │   └── package.json
 │   ├── app-build-manifest.json
@@ -167,6 +185,18 @@ rankslice
 │   └── trace
 ├── app
 │   ├── about
+│   │   └── page.jsx
+│   ├── admin
+│   │   └── page.jsx
+│   ├── admin-login
+│   │   └── page.jsx
+│   ├── blog
+│   │   ├── [slug]
+│   │   │   ├── edit
+│   │   │   │   └── page.jsx
+│   │   │   └── page.jsx
+│   │   ├── new
+│   │   │   └── page.jsx
 │   │   └── page.jsx
 │   ├── contact
 │   │   └── page.jsx
@@ -199,7 +229,9 @@ rankslice
 │       ├── collapsible.jsx
 │       ├── dropdown-menu.jsx
 │       ├── input.jsx
-│       └── tabs.jsx
+│       ├── label.jsx
+│       ├── tabs.jsx
+│       └── textarea.jsx
 ├── firebase
 │   └── config.js
 ├── lib
@@ -211,21 +243,28 @@ rankslice
 │   │   └── marsos.png
 │   ├── file.svg
 │   ├── globe.svg
+│   ├── google327593ac9283710b.html
+│   ├── googlec643d80354aef7c4.html
 │   ├── hero-illustration.jpeg
 │   ├── logo.svg
 │   ├── logo1.png
 │   ├── ms17680907.txt
 │   ├── next.svg
 │   ├── rankslice.svg
+│   ├── robots.txt
+│   ├── sitemap.xml
 │   ├── vercel.svg
 │   └── window.svg
 ├── .gitignore
 ├── components.json
 ├── eslint.config.mjs
+├── google327593ac9283710b.html
+├── googlec643d80354aef7c4.html
 ├── jsconfig.json
 ├── ms17680907.txt
 ├── next.config.mjs
 ├── package-lock.json
 ├── package.json
 ├── postcss.config.mjs
-└── README.md
+├── README.md
+└── structure.md

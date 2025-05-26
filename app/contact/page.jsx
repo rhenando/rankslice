@@ -1,139 +1,44 @@
-"use client";
+import ContactForm from "./form"; // Imports the client-side form
 
-import { useState } from "react";
-import { db } from "@/firebase/config";
-import { collection, addDoc, serverTimestamp } from "firebase/firestore";
-import { toast } from "sonner";
-import { useRouter } from "next/navigation";
+export const metadata = {
+  title: "Contact Us | Rank Slice",
+  description:
+    "Got a question or project in mind? Send Rank Slice a message and we’ll get back within 1 business day. Simple, friendly, and efficient communication.",
+  keywords: [
+    "contact rank slice",
+    "talk to web developer",
+    "SEO help",
+    "contact SEO expert",
+    "freelance developer philippines",
+    "website project inquiry",
+    "seo inquiry form",
+  ],
+  openGraph: {
+    title: "Contact Rank Slice",
+    description:
+      "Let’s talk about your web or SEO project — no pressure, no jargon.",
+    url: "https://rankslice.com/contact",
+    siteName: "Rank Slice",
+    images: [
+      {
+        url: "https://rankslice.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Contact Rank Slice",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Us | Rank Slice",
+    description:
+      "Let us know how we can help. Web development and SEO support done right.",
+    images: ["https://rankslice.com/og-image.jpg"],
+  },
+};
 
 export default function ContactPage() {
-  const router = useRouter();
-
-  const [status, setStatus] = useState("idle");
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-    honeypot: "", // 🐝 Bot trap
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (formData.honeypot) return; // 🧠 Bot detected
-
-    setStatus("submitting");
-
-    try {
-      await addDoc(collection(db, "contactMessages"), {
-        name: formData.name,
-        email: formData.email,
-        message: formData.message,
-        status: "unread",
-        createdAt: serverTimestamp(),
-      });
-
-      toast.success("✅ Message sent!");
-      setFormData({ name: "", email: "", message: "", honeypot: "" });
-      setStatus("submitted");
-
-      setTimeout(() => {
-        router.push("/thank-you");
-      }, 3000);
-    } catch (err) {
-      console.error("❌ Contact form error:", err);
-      toast.error("Something went wrong. Please try again.");
-      setStatus("error");
-    }
-  };
-
-  return (
-    <section className='px-6 py-16 max-w-2xl mx-auto'>
-      <h1 className='text-4xl font-bold text-center mb-4'>Let’s Talk</h1>
-      <p className='text-muted-foreground text-center mb-10'>
-        Got an idea, a project, or a question? Fill out the form — we’ll get
-        back within 1 business day.
-      </p>
-
-      <form onSubmit={handleSubmit} className='space-y-6'>
-        {/* Honeypot field (hidden from users) */}
-        <input
-          type='text'
-          name='honeypot'
-          className='hidden'
-          value={formData.honeypot}
-          onChange={handleChange}
-          autoComplete='off'
-        />
-
-        <div>
-          <label
-            htmlFor='name'
-            className='block text-sm font-medium text-gray-700'
-          >
-            Name
-          </label>
-          <input
-            id='name'
-            name='name'
-            type='text'
-            required
-            value={formData.name}
-            onChange={handleChange}
-            className='mt-1 w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-primary'
-          />
-        </div>
-
-        <div>
-          <label
-            htmlFor='email'
-            className='block text-sm font-medium text-gray-700'
-          >
-            Email
-          </label>
-          <input
-            id='email'
-            name='email'
-            type='email'
-            required
-            pattern='^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$'
-            title='Please enter a valid email address'
-            value={formData.email}
-            onChange={handleChange}
-            className='mt-1 w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-primary'
-          />
-        </div>
-
-        <div>
-          <label
-            htmlFor='message'
-            className='block text-sm font-medium text-gray-700'
-          >
-            Message
-          </label>
-          <textarea
-            id='message'
-            name='message'
-            rows={5}
-            required
-            value={formData.message}
-            onChange={handleChange}
-            className='mt-1 w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-primary'
-          />
-        </div>
-
-        <button
-          type='submit'
-          disabled={status === "submitting"}
-          className='w-full bg-primary text-white font-semibold py-3 rounded hover:bg-primary/90 transition'
-        >
-          {status === "submitting" ? "Sending..." : "Send Message"}
-        </button>
-      </form>
-    </section>
-  );
+  return <ContactForm />;
 }

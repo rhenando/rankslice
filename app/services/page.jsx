@@ -1,4 +1,42 @@
-// /app/services/page.jsx or /pages/services.jsx
+export const metadata = {
+  title: "Services | Rank Slice",
+  description:
+    "Explore Rank Slice's web development and SEO services designed to help entrepreneurs build, rank, and grow online with clarity and performance.",
+  keywords: [
+    "web development services",
+    "SEO packages philippines",
+    "Next.js developer",
+    "technical SEO",
+    "freelance web developer",
+    "seo for startups",
+    "custom websites",
+    "seo retainer",
+  ],
+  openGraph: {
+    title: "Our Services | Rank Slice",
+    description:
+      "From high-performing websites to results-driven SEO, discover how Rank Slice helps your brand grow online.",
+    url: "https://rankslice.com/services",
+    siteName: "Rank Slice",
+    images: [
+      {
+        url: "https://rankslice.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Rank Slice Services",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Services | Rank Slice",
+    description:
+      "We build and optimize websites with SEO baked in. Explore Rank Slice’s custom web and SEO packages.",
+    images: ["https://rankslice.com/og-image.jpg"],
+  },
+};
 
 export default function ServicesPage() {
   return (

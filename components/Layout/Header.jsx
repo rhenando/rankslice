@@ -10,10 +10,10 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const navLinks = [
+    { label: "About", href: "/about" },
     { label: "Services", href: "/services" },
     { label: "Portfolio", href: "/portfolio" },
-    { label: "Blog", href: "/blog" }, // ✅ Added Blog
-    { label: "About", href: "/about" },
+    { label: "Blog", href: "/blog" },
     { label: "Contact", href: "/contact" },
   ];
 

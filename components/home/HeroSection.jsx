@@ -32,15 +32,16 @@ export default function HeroSection() {
               <br className='hidden md:block' /> — Without the Jargon
             </h1>
 
-            <p className='text-lg text-gray-800 mb-8'>
+            <h2 className='text-lg text-gray-800 mb-8 font-normal'>
               We help entrepreneurs and small business owners turn their ideas
               into beautiful, high-performing websites with SEO baked in from
               the start. No fluff. Just results.
-            </p>
+            </h2>
 
             <div className='space-x-4'>
               <Button
                 asChild
+                aria-label='Schedule a free strategy call'
                 className='bg-primary text-primary-foreground hover:opacity-90'
               >
                 <Link href='/contact'>Get a Free Strategy Call</Link>
@@ -48,6 +49,7 @@ export default function HeroSection() {
               <Button
                 variant='outline'
                 asChild
+                aria-label='View our portfolio'
                 className='border-primary text-primary hover:bg-primary/10'
               >
                 <Link href='/portfolio'>See Our Work</Link>

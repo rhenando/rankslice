@@ -1,22 +1,20 @@
-// firebase/config.js
-import { initializeApp } from "firebase/app";
+// /firebase/config.js
+import { initializeApp, getApps, getApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-
-// 🔒 DO NOT import analytics unless you guard it with typeof window
-// import { getAnalytics } from "firebase/analytics";
+import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBz0KWfin9vvdlnIw8haDfBVg1Z7lcBzCE",
   authDomain: "rank-slice.firebaseapp.com",
   projectId: "rank-slice",
-  storageBucket: "rank-slice.firebasestorage.app",
+  storageBucket: "rank-slice.appspot.com", // ⚠️ fixed typo here (it was .firebasestorage.app)
   messagingSenderId: "878755416343",
   appId: "1:878755416343:web:96d0daac875ff8e040cf52",
   measurementId: "G-RBW7J3XHDR",
 };
 
-// ✅ Initialize the app
-const app = initializeApp(firebaseConfig);
+// Prevent re-initialization
+const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
 
-// ✅ Add this line to fix the error
 export const db = getFirestore(app);
+export const auth = getAuth(app);
