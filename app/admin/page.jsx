@@ -34,7 +34,7 @@ export default function AdminPage() {
   useEffect(() => {
     const auth = getAuth();
     const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user?.email === "fernando@rankslice.com") {
+      if (user?.email === "fernando@rankslicer.onmicrosoft.com") {
         setUser(user);
       } else {
         router.push("/");
