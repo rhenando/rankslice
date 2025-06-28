@@ -133,8 +133,10 @@ export default function PortfolioPage() {
 
       <div className='text-center mt-16'>
         <a
-          href='/contact'
-          className='inline-block bg-primary text-white font-semibold px-6 py-3 rounded hover:bg-primary/90 transition'
+          href='https://calendly.com/fernando-rankslice/30min'
+          target='_blank'
+          rel='noopener'
+          className='inline-block bg-[var(--premium-primary)] text-[var(--premium-light)] font-semibold px-6 py-3 rounded-md hover:bg-[var(--premium-primary)]/90 transition'
         >
           Let’s Build Yours Next
         </a>

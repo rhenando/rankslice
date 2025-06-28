@@ -18,7 +18,13 @@ export default function FinalCTASection() {
           asChild
           className='bg-[var(--premium-light)] text-[var(--premium-primary)] border border-[var(--premium-primary)] hover:bg-[var(--premium-light-soft)] px-6 py-3 text-lg font-semibold transition'
         >
-          <Link href='/contact'>Book a Free Strategy Call</Link>
+          <Link
+            href='https://calendly.com/fernando-rankslice/30min'
+            target='_blank'
+            rel='noopener'
+          >
+            Get a Free Strategy Call
+          </Link>
         </Button>
       </div>
     </section>

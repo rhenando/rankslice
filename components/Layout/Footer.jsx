@@ -61,11 +61,14 @@ const Footer = () => {
             Have an idea? Let’s talk about how to bring it to life.
           </p>
           <Link
-            href='/contact'
+            href='https://calendly.com/fernando-rankslice/30min'
             className='inline-block text-[var(--premium-primary)] font-medium hover:underline'
+            target='_blank'
+            rel='noopener'
           >
             Book a Free Strategy Call →
           </Link>
+
           <div className='flex space-x-4 mt-6'>
             <Link
               href='https://facebook.com/'

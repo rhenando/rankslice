@@ -47,8 +47,17 @@ export default function Header() {
 
         {/* CTA Button */}
         <div className='hidden md:flex'>
-          <Button className='bg-[var(--premium-primary)] text-[var(--premium-light)] hover:border-[var(--premium-pop)] hover:border-2 hover:opacity-90 font-semibold shadow rounded-md transition'>
-            Get a Free Strategy Call
+          <Button
+            asChild
+            className='bg-[var(--premium-primary)] text-[var(--premium-light)] hover:border-[var(--premium-pop)] hover:border-2 hover:opacity-90 font-semibold shadow rounded-md transition'
+          >
+            <Link
+              href='https://calendly.com/fernando-rankslice/30min'
+              target='_blank'
+              rel='noopener'
+            >
+              Get a Free Strategy Call
+            </Link>
           </Button>
         </div>
 
