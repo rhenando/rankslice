@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
   return (
-    <section className='relative w-full min-h-[90vh] flex items-center px-6 overflow-hidden bg-background'>
+    <section className='relative w-full min-h-[90vh] flex items-center px-6 overflow-hidden bg-[var(--premium-light)]'>
       {/* 🔹 Background Image */}
       <div className='absolute inset-0 z-0'>
         <Image
@@ -18,8 +18,8 @@ export default function HeroSection() {
           priority
         />
 
-        {/* 🔹 Optional Gradient Overlay (blue → background) */}
-        <div className='absolute inset-0 bg-gradient-to-b from-[#2980b9]/30 to-background' />
+        {/* 🔹 Optional Gradient Overlay (brand blue → white) */}
+        <div className='absolute inset-0 bg-gradient-to-b from-[var(--premium-primary)]/30 to-[var(--premium-light)]' />
       </div>
 
       {/* 🔸 Foreground Content */}
@@ -27,12 +27,12 @@ export default function HeroSection() {
         <div className='grid md:grid-cols-2 gap-10 items-center'>
           {/* ✏️ Text Section */}
           <div>
-            <h1 className='text-4xl md:text-5xl font-bold text-black leading-tight mb-6'>
+            <h1 className='text-4xl md:text-5xl font-bold text-[var(--premium-dark)] leading-tight mb-6'>
               Build a Website That Ranks and Converts{" "}
               <br className='hidden md:block' /> — Without the Jargon
             </h1>
 
-            <h2 className='text-lg text-gray-800 mb-8 font-normal'>
+            <h2 className='text-lg text-[var(--premium-dark)]/80 mb-8 font-normal'>
               We help entrepreneurs and small business owners turn their ideas
               into beautiful, high-performing websites with SEO baked in from
               the start. No fluff. Just results.
@@ -42,7 +42,7 @@ export default function HeroSection() {
               <Button
                 asChild
                 aria-label='Schedule a free strategy call'
-                className='bg-primary text-primary-foreground hover:opacity-90'
+                className='bg-[var(--premium-primary)] text-[var(--premium-light)] hover:opacity-90'
               >
                 <Link href='/contact'>Get a Free Strategy Call</Link>
               </Button>
@@ -50,7 +50,7 @@ export default function HeroSection() {
                 variant='outline'
                 asChild
                 aria-label='View our portfolio'
-                className='border-primary text-primary hover:bg-primary/10'
+                className='border-[var(--premium-primary)] text-[var(--premium-primary)] hover:bg-[var(--premium-primary)]/10'
               >
                 <Link href='/portfolio'>See Our Work</Link>
               </Button>

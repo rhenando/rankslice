@@ -18,15 +18,15 @@ export default function Header() {
   ];
 
   return (
-    <header className='sticky top-0 z-50 bg-background border-b border-border shadow-sm'>
+    <header className='sticky top-0 z-50 bg-[var(--premium-light)] border-b border-[var(--premium-primary)] shadow-sm'>
       <div className='max-w-7xl mx-auto px-4 py-4 flex items-center justify-between'>
         {/* Logo */}
         <Link href='/' className='flex items-center'>
           <Image
             src='/logo.svg'
             alt='Rank Slice Logo'
-            width={160} // ⬅️ increase this for larger logo
-            height={26} // optional: control vertical height
+            width={160}
+            height={26}
             className='object-contain'
             priority
           />
@@ -38,7 +38,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className='text-muted-foreground hover:text-primary font-medium transition'
+              className='text-[var(--premium-dark)] hover:text-[var(--premium-primary)] font-medium transition'
             >
               {link.label}
             </Link>
@@ -47,14 +47,14 @@ export default function Header() {
 
         {/* CTA Button */}
         <div className='hidden md:flex'>
-          <Button className='bg-primary text-primary-foreground hover:opacity-90'>
+          <Button className='bg-[var(--premium-primary)] text-[var(--premium-light)] hover:border-[var(--premium-pop)] hover:border-2 hover:opacity-90 font-semibold shadow rounded-full transition'>
             Get a Free Strategy Call
           </Button>
         </div>
 
         {/* Mobile Toggle */}
         <button
-          className='md:hidden p-2 text-foreground'
+          className='md:hidden p-2 text-[var(--premium-dark)]'
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label='Toggle menu'
         >
@@ -64,19 +64,19 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className='md:hidden bg-background border-t border-border'>
+        <div className='md:hidden bg-[var(--premium-light)] border-t border-[var(--premium-primary)]'>
           <div className='px-4 py-4 space-y-3'>
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className='block text-muted-foreground hover:text-primary font-medium'
+                className='block text-[var(--premium-dark)] hover:text-[var(--premium-primary)] font-medium'
                 onClick={() => setMobileOpen(false)}
               >
                 {link.label}
               </Link>
             ))}
-            <Button className='w-full mt-2 bg-primary text-primary-foreground hover:opacity-90'>
+            <Button className='w-full mt-2 bg-[var(--premium-primary)] text-[var(--premium-light)] hover:border-[var(--premium-pop)] hover:border-2 hover:opacity-90 font-semibold shadow rounded-full transition'>
               Get a Free Strategy Call
             </Button>
           </div>
