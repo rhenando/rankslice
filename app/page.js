@@ -1,9 +1,13 @@
 // app/page.jsx
 
+import AboutSection from "@/components/home/AboutSection";
+import CaseStudiesSection from "@/components/home/CaseStudiesSection";
+import FAQSection from "@/components/home/FAQSection";
 import FinalCTASection from "@/components/home/FinalCTASection";
 import HeroSection from "@/components/home/HeroSection";
 import HowItWorksSection from "@/components/home/HowItWorksSection";
 import ServicesSection from "@/components/home/ServicesSection";
+import TargetMarketsSection from "@/components/home/TargetMarketsSection";
 import WhoWeHelpSection from "@/components/home/WhoWeHelpSection";
 // import TestimonialsSection from "@/components/home/TestimonialsSection";
 import WhyChooseUsSection from "@/components/home/WhyChooseUsSection";
@@ -12,9 +16,9 @@ import React from "react";
 
 // ✅ SEO Metadata
 export const metadata = {
-  title: "Rank Slice | Web Development & SEO Services That Deliver",
+  title: "Rank Slice | Web Development & SEO Experts",
   description:
-    "We help entrepreneurs and small business owners turn ideas into fast, high-performing websites with SEO baked in. Serving clients in the Philippines, Saudi Arabia, and UAE.",
+    "Need a high-performing website? We help entrepreneurs in the Philippines, Saudi Arabia, and UAE launch SEO-optimized sites that get results.",
   keywords: [
     "web development",
     "seo services",
@@ -57,10 +61,14 @@ export default function HomePage() {
       <main className='flex-1'>
         <HeroSection />
         <ServicesSection />
+        <CaseStudiesSection />
         <HowItWorksSection />
         <WhyChooseUsSection />
         {/* <TestimonialsSection /> */}
+        <AboutSection />
+        <TargetMarketsSection />
         <WhoWeHelpSection />
+        <FAQSection />
         <FinalCTASection />
       </main>
     </div>

@@ -6,12 +6,18 @@ rankslice
 │   │   ├── images
 │   │   │   ├── bDgmL96xGKokLY8cMCoES2QRR-Ez-efY9nOd78AQaBw
 │   │   │   │   └── 60.1748181793589.sgRqFc3XdGYtMVZsojOAng5Rr-lpitgQkgJw-iEZeNk.Vy8iN2NiMC0xOTcwN2JhOTVlOSI.webp
+│   │   │   ├── dLrqSq2jw_5Z71aEJJKKV-Km5kS47uLZ-fbEr2S8tdk
+│   │   │   │   └── 60.1751123136000.tFe6BJnZMFWNWfHU09V4IUl3i_s8VxlqD0dyg6_PWT0.Vy8iMTg5ZTRlLTE5NzA3ZGFlNjc4Ig.webp
 │   │   │   ├── e-3J64mHSguGk_RrHDE9Kcnbkp5dU53EfM43V24CjQE
 │   │   │   │   └── 60.1748181508046.V11zeK3ljrZhkXRP5heusWjnKmUI25kw7MXlP4nmdxk.Vy8iNTNmOS0xOTcwN2E1NGExZSI.webp
+│   │   │   ├── Fd62rurSO8J_vCMXfJhpREZwt6T49iAZiKeHIsZdMJo
+│   │   │   │   └── 60.1751122643934.HXZlgsW33yyb8xv6lOp_zf0Kp7kE3ohLTPYySGj9dWg.Vy8iMTg5ZTRlLTE5NzA3ZGFlNjc4Ig.webp
 │   │   │   ├── Gf_kQBsmEQYkSVOwfHcK0DULxDUoYAJoB7bLl484Rlo
 │   │   │   │   └── 60.1748180165267.jL_Nr2_UCW5HwvS8cCV2tkwhUJJdVRNId9dGFHhjYyU.Vy8iNTNmOS0xOTcwN2E1NGExZSI.webp
+│   │   │   ├── lXNfDl5SauAemkvOMWglvYE-osJzjQMiz0cF5wBEj8w
+│   │   │   │   └── 60.1748250241427.vzITxeIndT9j-0hv2zdOes7HhNaBpb1icwnRWH93clk.Vy8iMTg5ZTRlLTE5NzA3ZGFlNjc4Ig.webp
 │   │   │   ├── n-2Ujdc6z4wSkLHyd0wrRbhNX6dvM44hX49oijNxiCI
-│   │   │   │   └── 60.1748200682871.FYULecFYr-nhKrjikn4YaTkzPnmmfR2hQ6bCpejpbxs.Vy8iMTg5ZTRlLTE5NzA3ZGFlNjc4Ig.webp
+│   │   │   │   └── 60.1751191077105.FYULecFYr-nhKrjikn4YaTkzPnmmfR2hQ6bCpejpbxs.Vy8iMTg5ZTRlLTE5NzA3ZGFlNjc4Ig.webp
 │   │   │   ├── Vx5jUFVZ-PJdp2mDLnp7vvMQJl-9TyKLVnSORJdCLT8
 │   │   │   │   └── 60.1748181619833.sgRqFc3XdGYtMVZsojOAng5Rr-lpitgQkgJw-iEZeNk.Vy8iN2NiMC0xOTcwN2JhOTVlOSI.webp
 │   │   │   ├── xBN_4Xyg0o4TvDdcbjIeCEKKVDfkv8ER_gB3zaStWyA
@@ -36,6 +42,9 @@ rankslice
 │   │   │   │   ├── 18.pack.gz
 │   │   │   │   ├── 19.pack.gz
 │   │   │   │   ├── 2.pack.gz
+│   │   │   │   ├── 20.pack.gz
+│   │   │   │   ├── 21.pack.gz
+│   │   │   │   ├── 22.pack.gz
 │   │   │   │   ├── 3.pack.gz
 │   │   │   │   ├── 4.pack.gz
 │   │   │   │   ├── 5.pack.gz
@@ -64,6 +73,13 @@ rankslice
 │   │   │       ├── 18.pack.gz
 │   │   │       ├── 19.pack.gz
 │   │   │       ├── 2.pack.gz
+│   │   │       ├── 20.pack.gz
+│   │   │       ├── 21.pack.gz
+│   │   │       ├── 22.pack.gz
+│   │   │       ├── 23.pack.gz
+│   │   │       ├── 24.pack.gz
+│   │   │       ├── 25.pack.gz
+│   │   │       ├── 26.pack.gz
 │   │   │       ├── 3.pack.gz
 │   │   │       ├── 4.pack.gz
 │   │   │       ├── 5.pack.gz
@@ -76,47 +92,19 @@ rankslice
 │   │   └── .rscinfo
 │   ├── server
 │   │   ├── app
-│   │   │   ├── admin
-│   │   │   │   ├── page_client-reference-manifest.js
-│   │   │   │   └── page.js
-│   │   │   ├── blog
-│   │   │   │   ├── [slug]
-│   │   │   │   │   ├── page_client-reference-manifest.js
-│   │   │   │   │   └── page.js
-│   │   │   │   ├── page_client-reference-manifest.js
-│   │   │   │   └── page.js
-│   │   │   └── favicon.ico
-│   │   │       └── route.js
+│   │   │   ├── favicon.ico
+│   │   │   │   └── route.js
+│   │   │   ├── page_client-reference-manifest.js
+│   │   │   └── page.js
 │   │   ├── vendor-chunks
-│   │   │   ├── @firebase.js
-│   │   │   ├── @grpc.js
-│   │   │   ├── @protobufjs.js
 │   │   │   ├── @radix-ui.js
 │   │   │   ├── @swc.js
 │   │   │   ├── class-variance-authority.js
 │   │   │   ├── clsx.js
-│   │   │   ├── dom-serializer.js
-│   │   │   ├── domelementtype.js
-│   │   │   ├── domhandler.js
-│   │   │   ├── domutils.js
-│   │   │   ├── entities.js
-│   │   │   ├── firebase.js
-│   │   │   ├── html-dom-parser.js
-│   │   │   ├── html-react-parser.js
-│   │   │   ├── htmlparser2.js
-│   │   │   ├── idb.js
-│   │   │   ├── inline-style-parser.js
-│   │   │   ├── lodash.camelcase.js
-│   │   │   ├── long.js
 │   │   │   ├── lucide-react.js
 │   │   │   ├── next.js
-│   │   │   ├── protobufjs.js
-│   │   │   ├── react-property.js
 │   │   │   ├── sonner.js
-│   │   │   ├── style-to-js.js
-│   │   │   ├── style-to-object.js
-│   │   │   ├── tailwind-merge.js
-│   │   │   └── tslib.js
+│   │   │   └── tailwind-merge.js
 │   │   ├── app-paths-manifest.json
 │   │   ├── interception-route-rewrite-manifest.js
 │   │   ├── middleware-build-manifest.js
@@ -131,13 +119,8 @@ rankslice
 │   ├── static
 │   │   ├── chunks
 │   │   │   ├── app
-│   │   │   │   ├── admin
-│   │   │   │   │   └── page.js
-│   │   │   │   ├── blog
-│   │   │   │   │   ├── [slug]
-│   │   │   │   │   │   └── page.js
-│   │   │   │   │   └── page.js
-│   │   │   │   └── layout.js
+│   │   │   │   ├── layout.js
+│   │   │   │   └── page.js
 │   │   │   ├── _app-pages-browser_node_modules_next_dist_client_dev_noop-turbopack-hmr_js.js
 │   │   │   ├── app-pages-internals.js
 │   │   │   ├── main-app.js
@@ -158,24 +141,23 @@ rankslice
 │   │   │   └── b8222d26e20b2e06-s.woff2
 │   │   └── webpack
 │   │       ├── app
-│   │       │   ├── layout.3970691521d4ea4e.hot-update.js
-│   │       │   └── layout.870762fb97805e68.hot-update.js
-│   │       ├── 3970691521d4ea4e.webpack.hot-update.json
+│   │       │   ├── layout.3f57dfc67d424f34.hot-update.js
+│   │       │   ├── layout.9449178c030f74e0.hot-update.js
+│   │       │   ├── layout.dad99cec18a94484.hot-update.js
+│   │       │   └── layout.dc539e0fdd021904.hot-update.js
+│   │       ├── 3f57dfc67d424f34.webpack.hot-update.json
 │   │       ├── 633457081244afec._.hot-update.json
-│   │       ├── 733390477f8806de.webpack.hot-update.json
-│   │       ├── 870762fb97805e68.webpack.hot-update.json
-│   │       ├── webpack.3970691521d4ea4e.hot-update.js
-│   │       ├── webpack.733390477f8806de.hot-update.js
-│   │       └── webpack.870762fb97805e68.hot-update.js
+│   │       ├── 9449178c030f74e0.webpack.hot-update.json
+│   │       ├── dad99cec18a94484.webpack.hot-update.json
+│   │       ├── dc539e0fdd021904.webpack.hot-update.json
+│   │       ├── webpack.3f57dfc67d424f34.hot-update.js
+│   │       ├── webpack.9449178c030f74e0.hot-update.js
+│   │       ├── webpack.dad99cec18a94484.hot-update.js
+│   │       └── webpack.dc539e0fdd021904.hot-update.js
 │   ├── types
 │   │   ├── app
-│   │   │   ├── admin
-│   │   │   │   └── page.ts
-│   │   │   ├── blog
-│   │   │   │   ├── [slug]
-│   │   │   │   │   └── page.ts
-│   │   │   │   └── page.ts
-│   │   │   └── layout.ts
+│   │   │   ├── layout.ts
+│   │   │   └── page.ts
 │   │   ├── cache-life.d.ts
 │   │   └── package.json
 │   ├── app-build-manifest.json
@@ -199,19 +181,20 @@ rankslice
 │   │   │   └── page.jsx
 │   │   └── page.jsx
 │   ├── contact
+│   │   ├── form.jsx
 │   │   └── page.jsx
 │   ├── portfolio
 │   │   └── page.jsx
 │   ├── services
 │   │   └── page.jsx
 │   ├── thank-you
+│   │   ├── content.jsx
 │   │   └── page.jsx
 │   ├── favicon.ico
 │   ├── globals.css
 │   ├── layout.js
 │   └── page.js
 ├── components
-│   ├── global
 │   ├── home
 │   │   ├── FinalCTASection.jsx
 │   │   ├── HeroSection.jsx
@@ -265,6 +248,4 @@ rankslice
 ├── next.config.mjs
 ├── package-lock.json
 ├── package.json
-├── postcss.config.mjs
-├── README.md
-└── structure.md
+└── postcss.config.mjs

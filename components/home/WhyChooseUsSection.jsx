@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  ThumbsUp,
-  BookOpen,
-  DollarSign,
-  Users,
-  TrendingUp,
-} from "lucide-react";
+import { BookOpen, DollarSign, Users, TrendingUp } from "lucide-react";
 
 export default function WhyChooseUsSection() {
   return (
@@ -16,22 +10,24 @@ export default function WhyChooseUsSection() {
           Why Choose Rank Slice?
         </h2>
         <p className='text-lg text-[var(--premium-dark)]/70 mb-12'>
-          We don’t just build websites — we build clarity, confidence, and
-          visibility.
+          Building your website should feel easy, transparent, and genuinely
+          helpful—never overwhelming. Here’s what makes us different:
         </p>
 
         <div className='grid gap-8 md:grid-cols-2 lg:grid-cols-4 text-left'>
-          {/* Simple & Clear Process */}
+          {/* No Jargon, Just Clarity */}
           <div className='p-6 rounded-xl bg-[var(--premium-light)] shadow-sm hover:shadow-lg hover:border hover:border-[var(--premium-primary)] transition'>
             <div className='flex items-center space-x-4 mb-4'>
               <BookOpen size={32} className='text-[var(--premium-primary)]' />
               <h3 className='text-lg font-semibold text-[var(--premium-dark)]'>
-                No Jargon. Just Clarity.
+                No Jargon—Just Clarity
               </h3>
             </div>
             <p className='text-[var(--premium-dark)]/70'>
-              We explain everything in plain English, so you stay informed and
-              in control every step of the way.
+              You’ll never feel lost or confused. We break down each project
+              milestone—from kickoff to launch—in clear, simple terms. You
+              always know what’s next, what’s needed, and what we’re working on,
+              so you can make confident decisions without tech overwhelm.
             </p>
           </div>
 
@@ -44,8 +40,10 @@ export default function WhyChooseUsSection() {
               </h3>
             </div>
             <p className='text-[var(--premium-dark)]/70'>
-              Every decision — from design to SEO — is made with your business
-              growth in mind.
+              We’re obsessed with outcomes—not just pretty websites. Everything
+              we do, from design to SEO, is measured against your business
+              goals. We deliver sites that rank higher, load faster, and convert
+              more visitors into leads or sales.
             </p>
           </div>
 
@@ -58,24 +56,43 @@ export default function WhyChooseUsSection() {
               </h3>
             </div>
             <p className='text-[var(--premium-dark)]/70'>
-              No surprises, no hidden fees. We keep it honest, clear, and
-              value-driven.
+              No hidden fees—ever. Choose from clear package tiers, custom
+              quotes, or flat-rate options based on your needs and goals. We
+              provide estimates up front and break down exactly what’s included,
+              so you’re always in control of your budget.
             </p>
           </div>
 
-          {/* Friendly Support */}
+          {/* Friendly, Ongoing Support */}
           <div className='p-6 rounded-xl bg-[var(--premium-light)] shadow-sm hover:shadow-lg hover:border hover:border-[var(--premium-primary)] transition'>
             <div className='flex items-center space-x-4 mb-4'>
               <Users size={32} className='text-[var(--premium-primary)]' />
               <h3 className='text-lg font-semibold text-[var(--premium-dark)]'>
-                Ongoing Support
+                Friendly, Ongoing Support
               </h3>
             </div>
             <p className='text-[var(--premium-dark)]/70'>
-              We’re here before, during, and after your launch. Need tweaks or
-              advice? We’ve got your back.
+              Our relationship doesn’t end at launch. Enjoy free post-launch
+              tweaks for 30 days, flexible maintenance packages, and real human
+              advice any time you need help. We’re in your corner—long after
+              your website goes live.
             </p>
           </div>
+        </div>
+        <div className='mt-10 text-center'>
+          <p className='text-[var(--premium-dark)]/70'>
+            <span className='font-semibold'>
+              Ready to get a website experience that’s clear, supportive, and
+              results-focused?
+            </span>{" "}
+            <br />
+            <a
+              href='/contact'
+              className='inline-block mt-3 px-6 py-3 rounded-xl bg-[var(--premium-primary)] text-white font-semibold hover:bg-[var(--premium-dark)] transition'
+            >
+              Get Your Free Strategy Call
+            </a>
+          </p>
         </div>
       </div>
     </section>
